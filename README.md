@@ -2,8 +2,10 @@ ParallaxColorsJScrollVelasco
 =======================
 
 Parallax JScroll template. Feel free to fork it and customize it as you wish.
-This is purely experimental
-[Demo on github:](https://#)
+This is purely experimental, needs a few fixes and updates as of April 27, 2014
+- canvas not working properly, need to fix
+- content to be updated
+[Demo on github:](https://rawgit.com/cassking/ParallaxColorsJScrollVelasco/master/site/index.html)
 
 ## Norma Velasco Colors JScroll v1.0
 
