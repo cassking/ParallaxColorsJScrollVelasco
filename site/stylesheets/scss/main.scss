@@ -1,0 +1,730 @@
+//Imports
+@import "partials/variables";
+@import "partials/mixins";
+//@import "partials/patterns";
+//@import "partials/animations";
+@import "jquery.jscrollpane.css";
+@import "flexslider.css";
+@import "canvas.css";
+@import url("../../fonts/fonts.css");
+@import url("../../fonts/font-awesome.css");
+@import "partials/print";
+
+/*
+ParallaxColorsJScrollVelasco
+Author: Casssandra King, @ca55king, cassandraking.net
+TYPOGRAPHY --------
+Fonts from Google = 'Lustria Regular', 'Oswald-Light' 'Lato-Regular', 'Lato-Light', 'Lato-Italic', 'Lato-Bolditalic', 'Lato-Bold', 'Lato-Blackitalic', 'Lato-Black'.
+Fonts from FontAwesome = 'FontAwesome'.
+POEMS --------
+Original work Norma Velasco.
+*/
+
+/* ==========================================================================
+  Some items from HTML5 Boilerplate to improve performance
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Mac only, maxvoltar.com/archive/-webkit-font-smoothing */
+
+html {
+    -webkit-font-smoothing: antialiased;
+    background: $greylight;
+}
+body {
+    font-family: 'latolight', sans-serif;
+    font: 100%;
+    font-size: 1em;
+    line-height: 1.4;
+    font-weight: 300;
+}
+/* apply a natural box layout model to all elements, via Paul Irish */
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Better screenreader Access*/
+a {
+    text-decoration: none;
+}
+a:hover,
+a:active {
+    outline: none;
+}
+a,
+a:active,
+a:visited {
+    color: $bluedeep;
+}
+a:hover {
+    color: $bluelight;
+}
+/* IE7 Helper bicubic resizing for non-native sized IMG:
+code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+
+.ie7 img {
+    -ms-interpolation-mode: bicubic;
+}
+/* Styles for the jScrollPane specific to this  page */
+
+.scroll-pane
+{
+	width: 100%;
+	height: auto;
+	overflow: auto;
+}
+
+.visually-hidden {
+     @extend %hide-text;
+}
+.color-1 {
+    background: $yellow;
+}
+.color-2 {
+    background: $bluelight;
+}
+.color-3 {
+    background: $bluemedium;
+}
+.color-4 {
+    background: $bluedark;
+    color: $white;
+}
+.color-5 {
+    background: $bluedeep;
+    color: $white;
+}
+.title {
+    &:after {
+        content: "\f0ac";
+        float: right;
+        font-family: FontAwesome;
+        font-style:normal;
+        font-weight: normal;
+        opacity: 0.1;
+    }
+}
+.title-1 {
+    font-family: 'lustriaregular', serif;
+    font-weight: 100;
+    letter-spacing: -2px;
+}
+.title-2 {
+    font-family: 'lato-light', sans-serif;
+    font-weight: 200;
+    letter-spacing: -20px;
+    text-transform: lowercase;
+}
+.title-3 {
+    font-family: 'Lato-Black', sans-serif;
+    font-weight: 100;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+.tooltips {
+    position: relative;
+    padding: 15px;
+    background: $white;
+    border: 1px solid $greymedium;
+    @include mediumborderradius;
+    @include box-shadow-custom;
+     &:before {
+           position: absolute;
+            content: " ";
+            height:2px;
+            width: 2px;
+            left: 50%;
+            bottom: -11px;
+            background: inherit;
+            border: 10px solid $white;
+            @include rotate(45deg);
+            @include box-shadow-custom(3px, 0, $blur: 1px, $color: rgba(0,0,0,0.9));   
+        }
+      &:after {
+        position: absolute;
+            content: " ";
+            height:4px;
+            width: 4px;
+            left: 50%;
+            bottom: -5px;
+            background: inherit;
+            border: 10px solid $white;
+            @include rotate(45deg);
+        }
+}
+.arrow-up{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: fontawesome;
+    font-size: 2em;
+    opacity: 0.3;
+}
+.accordionContainer {
+    height: 500px;
+    width:100%;
+    font-size: 1em;
+    font-family: 'lustriaregular', serif;
+    text-align: center;
+    letter-spacing: -1px;
+    background: $bluedeep;
+    .accordionOuter {
+        height: 650px;
+        width: 100%;
+        overflow: hidden;
+        .slides {
+            height: 3985px;
+            li {
+                @include transition(all, 0.75s, linear);
+                height: 1.6%;
+                background: $bluelight;
+                overflow: hidden;
+                @include box-shadow-custom(0px, -4px, 6px, rgba(0,0,0,0.1));
+                &:hover {
+                    @include box-shadow-custom(0px, -4px, 6px, rgba(0,0,0,0.6));
+                }
+                &.stanza {
+                     @include transition(all, 0.75s, ease-in-out);
+                    p, h2 {
+                        overflow: hidden;
+                        opacity: 0.2;
+                        @include transition(all, 0.75s, ease-in-out);
+                    }
+                    h2 {
+                        padding-top: 10px;
+                    }
+                    p {
+                        padding-top: 5px;
+                        line-height: 0.9;
+                    }
+                }
+                &.stanza1 {
+                    background: $bluelight;
+                }
+                &.stanza2 {
+                    background: $bluemedium;
+                }
+                &.stanza3 {
+                    background: $bluedark;
+                }
+                 &.stanza4 {
+                    background: $bluedeep;
+                    color: white;
+                }
+                &.stanza5 {
+                    background: $yellow;
+                }
+                 &.stanza6 {
+                    background: $bluedeep;
+                    color: white;  
+                }
+                &.stanza7 {
+                    background: $bluedark;
+                       color: white;
+                }
+                &.stanza8 {
+                    background: $bluemedium
+                }
+                &.stanza9 {
+                    background: $bluelight;
+                }
+                &.stanza10 {
+                    background: $bluemedium;
+                }
+                &.stanza11 {
+                    background: $bluedark;
+                }
+                &.stanza:hover {
+                    p, h2 {
+                        opacity: 1;
+                        overflow: hidden;
+                    }
+                    h2 {
+                        padding-top: 30px;
+                    }
+
+                }
+                &.stanza1:hover,
+                &.stanza2:hover,
+                &.stanza3:hover,
+                &.stanza4:hover,
+                &.stanza5:hover,
+                &.stanza6:hover,
+                &.stanza7:hover,
+                &.stanza8:hover,
+                &.stanza9:hover,
+                &.stanza10:hover,
+                &.stanza11:hover,  {
+                height: 3%;
+                @include scale(1.14);
+                line-height: 1.3;
+                    }
+
+            }
+            
+        }
+    }
+}
+
+/* ==========================================================================
+  Custom CSS :: Add or Change any additional styles here if you wish
+   ========================================================================== */
+
+header[role="banner"] {
+    width: 100%;
+    position: relative;
+    padding:0 0 30px 0;
+
+    border-bottom: $base-border;
+}
+nav[role="navigation"] {
+    width: auto;
+    padding: 0;
+ h2 {
+    height: 0;
+ }
+	#mainNav {
+        width: auto;
+        height: auto;
+        text-align: center;
+        font-family: 'latobold', sans-serif;
+		@include navigation-lists;
+          li {
+            padding: 10px 0 ;
+            margin: 0 10px;
+            opacity: 0.5;
+            &:hover {
+                margin-top: -2px;
+                opacity: 0.7;
+            }
+            a {
+                color: $greymedium;
+                background: $white;
+                line-height: 0;
+                padding: 3px 20px;
+                border: 4px solid $greymedium;
+                border-radius: $small-border-radius;
+                text-transform: uppercase;
+                @include transition(all, 0.2s, linear);
+                &:hover {
+                    padding: 4px 22px;
+                    margin: 0  -2px;
+                    @include box-shadow-custom(0, 1px, 1px, #eee);
+                }
+            }
+            &.logo {
+               
+                a {
+                    background: $white;
+                }
+        }
+            float: none;
+            .navLink {   
+            }
+          #navLogo {
+            @extend %hide-text;
+          }
+      }
+	}
+}
+main[role="main"] {
+     overflow: hidden;
+    #pageWrapper {
+        width: 2500px;
+        height: auto;
+        float: left;
+        background: $white;
+        overflow: hidden;
+        .page {
+            display: block;
+            float: left;
+            width: 32%;
+            height: auto;
+            overflow: hidden;
+            .pageSection {
+                position: relative;
+                border-right: 4px solid $black;
+                border-bottom: 4px solid $black;
+                display: block;
+                float: left;
+                width: 50%;
+                height: 350px;
+                padding: 4px;
+                p {
+                    margin: 0 auto;
+                    padding: 30px;
+                }
+                .flexslider {
+                    margin: 0 auto;
+                    width: 586px;
+                    height: 90%;
+                    background: inherit;
+                    border: none;
+                    .slides {
+                        padding-top: 7px;
+                        li {
+                            text-align: center;
+                            padding-bottom: 20px;
+                            p, h2 {
+                                margin: 0 auto;
+                                width: 76%;
+                                padding: 30px 0 0 55px; 
+                                text-align: left; 
+                            }
+                            h2 {
+                                width: 300px;
+                                font-size: 4em;
+                                line-height: 0.6;
+                            }
+                          
+                        }
+                    }
+                }
+            }
+        }
+
+        #spanish {
+            position:static;
+            #poema-uno {
+                width: 200px;
+                line-height: 0.6;
+               p {
+                padding: 20px 0 0 0;
+                 opacity: 0.5;
+               }
+               .fa {
+                color: $white;
+                opacity: 0.3;
+                &.pull-left {
+                   line-height: 0.8; 
+                }
+                &.pull-right {
+                    line-height: 0;
+                }
+            
+               }
+            }
+            #poema-dos {
+                width: 600px;
+               
+            }
+            #poema-tres {
+                width: 600px;
+                border-bottom: none;
+                font-family: "lustriaregular", serif;
+                font-weight: 100;
+                font-size: 1.4em;
+                line-height: 2.0;
+                text-align:  center;
+                strong {
+                    font-size: 2.1em;
+                    line-height: 0.1;
+                }
+            }
+            #poema-cuatro {
+                width: 200px;
+                border: none;   
+            }
+        }
+        #english {
+            position: relative;
+            width: 36%;
+            background:$bluelight;
+
+            #poem-one {
+                width: 50px;
+                padding:0;
+                background: $bluedeep;
+                color: $white;
+                font-size: 3.0em;
+                line-height: 0.6;
+                letter-spacing: -40px; 
+                h2 {
+                    margin-left: -10px;
+                    opacity: 0.3;
+                } 
+            }
+            #poem-two {
+                position: relative;
+                width: 850px;
+                border-right: none;
+                font-family: 'lustriaregular', 'serif';
+                font-size: 4em;
+                color: #926700;
+                 p.animate {
+                    padding: 0;
+                    font-size: 2.1em;
+                    line-height: 0.9;
+                    opacity: 0.1;
+                    -webkit-animation-name: vertscroller;
+                    -webkit-animation-duration: 10s;
+                    -webkit-animation-timing-function: ease;
+                    -webkit-animation-iteration-count: 1;   
+                    -webkit-animation-direction: normal;
+                    -webkit-animation-delay: 0;
+                    -webkit-animation-play-state: running;
+                    -webkit-animation-fill-mode: forwards;
+                   
+                }
+
+            }
+            #poem-three { 
+                position: relative;
+                width: 590px;
+                height:350px;
+                background: $bluedark;
+            }
+            #poem-four {
+                position: relative;
+                width: 120px;
+                border-bottom: none;
+                color: $white;
+                background: $bluedeep;
+                font-family: "lato-light", sans-serif;
+                font-size: 1.1em;
+                line-height: 1.1;
+                text-align: center;
+                 overflow: hidden;
+                @include transition(all, 0.6s, ease-in);
+                
+                h2 {
+                    position: absolute;
+                    height: 116px;
+                    width: 340px;
+                    left: 13px;
+                    margin-left: -125px;
+                    margin-top: 110px;
+                    margin-bottom: -110px;
+                    display: block;
+                    overflow: hidden;
+                    @include rotate(90deg);
+                } 
+                .diagonal {
+                    position: absolute;
+                    top: -270px;
+                    left: -300px;
+                    width: 500px;
+                    height: 300px;
+                    text-align: left;
+                    font-size: 0.6em;
+                     z-index:0;
+                     @include rotate(-45deg);
+                }
+                
+            }
+        }
+        #about {
+            #about-one {
+                width: 80%;
+                height: 50px;
+                 background: $bluemedium;
+                border-left: $base-border;
+            }
+            #about-two {
+                width: 20%;
+                height: 50px;
+                background: $bluedeep;
+                color: $white;
+            }
+            #about-three {
+                width: 30%;
+                height: 650px;
+                border-bottom: none;
+                border-left: 4px solid $black;
+                background: $yellow;
+                }
+            #about-four {
+                width: 70%;
+                height: 650px;
+                border-bottom: none;
+                padding: 0;
+                .accordionContainer {
+                    .accordionOuter {
+                        .slides {
+                            li {
+                                &.stanza1 p,
+                                &.stanza2 p,
+                                &.stanza3 p,
+                                &.stanza4 p,
+                                &.stanza5 p,
+                                &.stanza6 p,
+                                &.stanza7 p,
+                                &.stanza8 p,
+                                &.stanza9 p,
+                                &.stanza10 p ,
+                                &.stanza11 p {
+                                    padding: 4px;
+                                    &:hover {
+                                        line-height: 1.1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* elements related to m#main*/
+/*these elements have been placed outside of parent element to prevent clipping on left*/
+.callout {
+    position: absolute;
+    top: 350px;
+    left: 600px;
+    width: 790px;
+    padding:20px;
+    background: none;
+    h2 {
+       
+    }
+    p {
+        height: 320px;
+        @include columns(3);
+        @include column-gap(10px);
+        font-family: "lato-light", sans-serif;
+        font-size: 0.7em;
+        line-height: 01.1;
+        color: $white;
+        opacity: 0.6;
+        strong {
+            opacity: 1.0;
+            font-size: 2.2em;
+        }
+    }
+    h2 {
+        font-size: 11em;
+        line-height: 0.8;
+        display: inline-block;
+        position: absolute;
+        bottom: -20px;
+        color: $white;
+        opacity: 0.1;
+    }
+  
+}
+.fakeborder {
+    position: absolute;
+    top: 350px;
+    left: 1596px;
+    width: 4px;
+    height: 350px;
+    background: $black;
+}
+/*footer*/
+footer[role="contentinfo"] {
+    padding: 30px;
+    border-top: 4px solid $black;
+    #afterword-en,#afterword-es {
+        margin-top: 50px;
+        @extend %center-content;
+        width: 80%;
+        max-width: 900px;
+        @extend %clearfix;
+        img {
+            @extend %center-content;
+            width: 200px;
+            height: 200px;
+        }
+      
+        h2 {
+            font-family: "Lato-Black", sans-serif;
+            font-size: 4em;
+            text-align: center;
+            line-height: 0.9;
+            opacity: 0.3;
+            color: $bluedark ;
+
+        }
+        p {
+            margin: 20px;
+           @include columns(2);
+           @include column-gap(4em)
+        }
+        strong {
+            font-family: "lustriaregular", serif;
+            font-weight: 100;
+            font-size: 2em;
+        }
+    }
+
+    #footerNav {
+        width: auto;
+        @include navigation-lists;
+        text-align: center;
+        li {
+            margin: 0 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: auto;
+            border-top: 1px solid $white;
+            opacity: 0.5;
+            @include transition(all, 0.2s, linear);
+            &:hover {
+                border-top: 4px solid $greylight;
+                border-bottom: 1px solid $white;
+
+              }
+
+/*prevent  font icons being spoken */
+            [data-icon]:before {
+              font-family: FontAwesome; 
+              content: attr(data-icon);
+              speak: none;
+            }
+            .navLink {
+                text-transform: uppercase;
+                font-size: .9em;
+                    &.github {
+                        &:after {
+                        content: "\f113";
+                        display: block;   
+                        font-family: FontAwesome;
+                        font-style:normal;
+                        font-weight: normal;
+                        text-align: center;
+                        }   
+                    }  
+                    &.linkedin {
+                        &:after {
+                        content: "\f0e1";
+                        display: block;   
+                        font-family: FontAwesome;
+                        font-style:normal;
+                        font-weight: normal;
+                        text-align: center;
+                        }   
+                    }
+                    &.twitter {
+                        &:after {
+                        content: "\f099";
+                        display: block;   
+                        font-family: FontAwesome;
+                        font-style:normal;
+                        font-weight: normal;
+                        text-align: center;
+                        }   
+                    }
+                    &.credits {
+                        &:after {
+                        content: "\f08e";
+                        display: block;   
+                        font-family: FontAwesome;
+                        font-style:normal;
+                        font-weight: normal;
+                        text-align: center;
+                        }   
+                    }  
+            }
+        }
+    }
+}
+
+
