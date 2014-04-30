@@ -1,4 +1,4 @@
-ParallaxColorsJScrollVelasco
+ParallaxColorsJScrollVelasco BETA -- work in progress
 =======================
 
 Parallax JScroll template. Feel free to fork it and customize it as you wish.
