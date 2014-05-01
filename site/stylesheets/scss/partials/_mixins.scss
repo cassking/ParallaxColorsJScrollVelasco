@@ -72,12 +72,12 @@
     -o-transform:rotate($transform-angle);
     transform:rotate($transform-angle);
 }
-@mixin transition($transition-property, $transition-time, $method) {
-    -webkit-transition: $transition-property $transition-time $method;
-    -moz-transition: $transition-property $transition-time $method;
-    -ms-transition: $transition-property $transition-time $method;
-    -o-transition: $transition-property $transition-time $method;
-    transition: $transition-property $transition-time $method;
+@mixin transition($transition-property, $transition-time, $method, $transition-delay) {
+    -webkit-transition: $transition-property $transition-time $method $transition-delay;
+    -moz-transition: $transition-property $transition-time $method $transition-delay;
+    -ms-transition: $transition-property $transition-time $method $transition-delay;
+    -o-transition: $transition-property $transition-time $method $transition-delay;
+    transition: $transition-property $transition-time $method $transition-delay;
 }
 @mixin scale($transform-scale-newsize) {
     -webkit-transform:scale($transform-scale-newsize);
@@ -87,7 +87,7 @@
     transform:scale($transform-scale-newsize);
 }
 
-@-webkit-keyframes vertscroller
+@-webkit-keyframes opacityfader
   {
    0% {
       top: 0;

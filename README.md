@@ -1,5 +1,6 @@
 ParallaxColorsJScrollVelasco BETA -- work in progress
 =======================
+April 2014.
 
 Parallax JScroll template. Feel free to fork it and customize it as you wish.
 This is purely experimental, needs a few fixes and updates as of April 27, 2014
@@ -31,4 +32,5 @@ _Author: Casssandra King, @ca55king, cassandraking.net_
 3. Patterns
 4. HTML5
 5. Canvas
- 
+
+

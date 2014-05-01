@@ -12,14 +12,14 @@
 	<!-- these should go at the top, unfortunately loading works best when these are in the head of the document, otherwise, all JS should go right before the closing </body> tag -->
   	<script src="js/modernizr-2.7.1.js"></script>
   	<script type="text/javascript" src="js/modernizr.custom.41769.js"></script>
-  	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  	<!--//used by canvas <script type="text/javascript" src="http://www.google.com/jsapi"></script>-->
 
 
 	<!-- JS Code -->
 	<!-- use this in production -->
-	 <!--//<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 	<!--  use this in dev -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	 <!--//<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>-->
 
 </head>
 	<body>
@@ -96,15 +96,19 @@
 				<!--english-->
 				<section id="english" class="page">
 					<div id="poem-one" class="pageSection">
-						<h2 class="title title-1">¡Preñado está  el Universo!¡Preñado está  el Universo!</h2>
+						<h2 class="title title-1">¡Preñado está el Universo! ¡Preñado está el Universo!</h2>
 					</div>
 					<div id="poem-two" class="pageSection color-1">
 						 <div id="wrapper" class="wrapper">
-                			<canvas id="canvas-banner" class="inactive">
+<!-- 						 	deactivated for now
+ -->                			<!-- <canvas id="canvas-banner" class="inactive">
                     			<img src="img/fallback1.png" />
-                			</canvas>
+                			</canvas> -->
             			</div>
+            			<p class="layer">¡Preñado está!<br/>¿Y no es maravilloso verlo así<br/>-borracho, loco, extasiado de gozo,<br/>bailando delirante en la cósmica pista,<br/>refulgente de polvo intergaláctico<br/>con planetas, estrellas?</p>
+
                 		<p class="animate">Regalo</p>
+
             		</div>
 					<div id="poem-three" class="pageSection color-4">
 						<!--contents live in .callout, below, when placed in parent element, contents get clipped-->
@@ -133,7 +137,7 @@
 						<div class="accordionOuter">
 						  	<ul class="slides">
 							  	<li class="stanza1 stanza">
-							  		<h2 class="title title-1">Te regalo un planeta</h2>
+							  		<h2 class="title title-2-alt">Te regalo un planeta</h2>
 							      <p>¡Preñado está el Universo!<br/>¡Preñado¡ ¡Sí¡ Miralo orondo<br/>pasearse entre los soles cual panzuda<br/>primeriza ostentando presumida<br/>su sideral barriga como trofeo de oro:<br/>tinaja de factura sacra,<br/>forjada de aire, fuego, tierra y agua.<br /></p>
 							    </li>
 							    <li  class="stanza2 stanza"> 
@@ -210,8 +214,8 @@
 	<script src="js/jquery.mousewheel.js"></script>
 	<script src="js/jquery.flexslider-min.js"></script>
 	<script type="text/javascript" src="js/smoothscroll.js"></script>
-	<script type="text/javascript" src="js/canvas.js"></script>
-	<script type="text/javascript" src="js/canvas1-content.js"></script>
+	<!--<script type="text/javascript" src="js/canvas.js"></script>
+	<script type="text/javascript" src="js/canvas1-content.js"></script>-->
 	<link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
 
 
@@ -252,15 +256,6 @@ $(function()
 		}
 	)
 
-});
-
-$(".tooltips").hide();
-$("#poema-dos").mouseenter(function() {
-	$(".tooltips").show();
-$("#poema-dos").mouseleave(function(){
-	$(".tooltips").hide();
-});
-		
 });
 
 
