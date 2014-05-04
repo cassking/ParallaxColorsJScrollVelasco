@@ -723,10 +723,40 @@ main[role="main"] {
         width: 80%;
         height: 50px;
         border-left: 4px solid black; }
+        main[role="main"] #pageWrapper #about #about-one p {
+          padding: 0;
+          opacity: 0.7;
+          text-align: right;
+          font-family: "Lato-Blackitalic", sans-serif;
+          font-size: 1.3em;
+          -webkit-column-count: 6;
+          /* Chrome, Safari, Opera */
+          -moz-column-count: 6;
+          /* Firefox */
+          -o-column-count: 6;
+          -ms-column-count: 6;
+          column-count: 6;
+          -webkit-column-gap: 0;
+          /* Chrome, Safari, Opera */
+          -moz-column-gap: 0;
+          /* Firefox */
+          -o-column-gap: 0;
+          -ms-column-gap: 0;
+          column-gap: 0;
+          -webkit-transform: rotate(-10deg);
+          -moz-transform: rotate(-10deg);
+          -ms-transform: rotate(-10deg);
+          -o-transform: rotate(-10deg);
+          transform: rotate(-10deg); }
       main[role="main"] #pageWrapper #about #about-two {
         width: 20%;
         height: 50px;
         color: white; }
+        main[role="main"] #pageWrapper #about #about-two p {
+          padding: 0;
+          opacity: 0.7;
+          font-family: "Lato-Blackitalic", sans-serif;
+          text-align: right; }
       main[role="main"] #pageWrapper #about #about-three {
         width: 30%;
         height: 650px;
