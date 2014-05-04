@@ -1068,7 +1068,8 @@ main[role="main"] {
           -moz-transform: rotate(90deg);
           -ms-transform: rotate(90deg);
           -o-transform: rotate(90deg);
-          transform: rotate(90deg); }
+          transform: rotate(90deg);
+          opacity: 0.4; }
         main[role="main"] #pageWrapper #english #poem-four .diagonal {
           position: absolute;
           top: -270px;
@@ -1101,22 +1102,32 @@ main[role="main"] {
       main[role="main"] #pageWrapper #about #about-one {
         width: 80%;
         height: 50px;
-        border-left: 4px solid black; }
+        border-left: 4px solid black;
+        overflow: hidden; }
         main[role="main"] #pageWrapper #about #about-one p {
-          padding: 0;
-          opacity: 0.7;
+          position: relative;
+          padding: 0 4px 0 0;
+          margin-top: -4px;
+          opacity: 0.5;
           text-align: right;
-          font-family: "Lato-Blackitalic", sans-serif;
-          font-size: 1.3em; }
+          line-height: 0.8;
+          font-family: "Lato-Black", sans-serif;
+          font-size: 0.9em;
+          z-index: 30; }
       main[role="main"] #pageWrapper #about #about-two {
         width: 20%;
         height: 50px;
-        color: white; }
+        color: white;
+        overflow: hidden; }
         main[role="main"] #pageWrapper #about #about-two p {
-          padding: 0;
-          opacity: 0.7;
-          font-family: "Lato-Blackitalic", sans-serif;
-          text-align: right; }
+          position: relative;
+          padding: 0 0 0 4px;
+          margin-top: -2px;
+          opacity: 0.5;
+          font-family: "Lato-Black", sans-serif;
+          font-size: 1.2em;
+          line-height: 0.7;
+          z-index: 30; }
       main[role="main"] #pageWrapper #about #about-three {
         position: relative;
         width: 30%;
@@ -1132,13 +1143,12 @@ main[role="main"] {
           position: relative;
           padding: 0;
           font-family: "lustriaregular", serif;
-          text-shadow: -1px -1px 0px rgba(248, 208, 105, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.3);
           text-align: center;
           color: #fff;
           font-size: 2.3em;
           line-height: .9em;
           letter-spacing: -1px;
-          opacity: 1; }
+          opacity: 0.8; }
           main[role="main"] #pageWrapper #about #about-three p b {
             font-style: normal;
             font-weight: normal;
@@ -1146,8 +1156,7 @@ main[role="main"] {
             main[role="main"] #pageWrapper #about #about-three p b span {
               opacity: 1;
               display: inline-block;
-              font-size: 110%;
-              text-shadow: -1px -1px 0px rgba(248, 208, 105, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.3); }
+              font-size: 110%; }
               main[role="main"] #pageWrapper #about #about-three p b span:nth-child(1) {
                 -o-animation: moveWord;
                 -moz-animation: moveWord;
@@ -1268,6 +1277,7 @@ main[role="main"] {
   padding: 20px;
   background: #80b7e8; }
   .callout p {
+    position: relative;
     height: 320px;
     -webkit-column-count: 3;
     /* Chrome, Safari, Opera */
@@ -1289,6 +1299,10 @@ main[role="main"] {
     color: white;
     opacity: 0.6; }
     .callout p strong {
+      width: 350px;
+      position: absolute;
+      bottom: 20px;
+      right: 0;
       opacity: 1.0;
       font-size: 2.2em; }
   .callout h2 {
@@ -1307,6 +1321,29 @@ main[role="main"] {
   width: 4px;
   height: 350px;
   background: black; }
+
+.absolute-container {
+  position: absolute;
+  overflow: hidden;
+  top: 350px;
+  left: 1510px;
+  height: 350px;
+  width: 190px;
+  background: #032d57;
+  color: white;
+  text-align: center;
+  font-size: 4em;
+  line-height: 0.4; }
+  .absolute-container div {
+    opacity: 0.1; }
+  .absolute-container.absolute-container-alt {
+    top: 0;
+    right: 10px;
+    height: 50px;
+    width: 982px;
+    z-index: 1;
+    border-bottom: 4px solid black;
+    border-left: 4px solid black; }
 
 /*footer*/
 footer[role="contentinfo"] {
