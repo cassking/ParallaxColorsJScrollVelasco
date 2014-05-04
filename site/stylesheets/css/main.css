@@ -717,40 +717,46 @@ main[role="main"] {
           -ms-transform: rotate(-45deg);
           -o-transform: rotate(-45deg);
           transform: rotate(-45deg); }
-    main[role="main"] #pageWrapper #about #about-one {
-      width: 80%;
-      height: 50px;
-      border-left: 4px solid black; }
-    main[role="main"] #pageWrapper #about #about-two {
-      width: 20%;
-      height: 50px;
-      color: white; }
-    main[role="main"] #pageWrapper #about #about-three {
-      width: 30%;
-      height: 650px;
-      border-left: 4px solid black;
-      -webkit-transform: translateZ(0);
-      -moz-transform: translateZ(0);
-      -ms-transform: translateZ(0);
-      -o-transform: translateZ(0);
-      transform: translateZ(0); }
-      main[role="main"] #pageWrapper #about #about-three p {
-        font-family: "lustriaregular", serif;
-        text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.7), 1px 1px 0px rgba(0, 0, 0, 0.8);
-        text-align: center;
-        color: #fff;
-        line-height: 0.7em;
-        opacity: 0.4; }
-    main[role="main"] #pageWrapper #about #about-four {
-      width: 70%;
-      height: 650px;
-      border-bottom: none;
-      padding: 0; }
-      main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li.stanza1 h2 {
-        margin-top: -8px; }
-      main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza1 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza2 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza3 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza4 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza5 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza6 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza7 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza8 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza9 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza10 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza11 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza12 p {
-        padding-top: 0;
-        padding-bottom: 2px; }
+    main[role="main"] #pageWrapper #about {
+      /*comment*/ }
+      main[role="main"] #pageWrapper #about #about-one {
+        width: 80%;
+        height: 50px;
+        border-left: 4px solid black; }
+      main[role="main"] #pageWrapper #about #about-two {
+        width: 20%;
+        height: 50px;
+        color: white; }
+      main[role="main"] #pageWrapper #about #about-three {
+        width: 30%;
+        height: 650px;
+        border-left: 4px solid black;
+        overflow: hidden;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0); }
+        main[role="main"] #pageWrapper #about #about-three p {
+          margin-left: -35px;
+          font-family: "lustriaregular", serif;
+          text-shadow: -1px -1px 0px rgba(248, 208, 105, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.3);
+          text-align: center;
+          color: #fff;
+          font-size: 6.9em;
+          line-height: 0.7em;
+          letter-spacing: -7px;
+          opacity: 0.4; }
+      main[role="main"] #pageWrapper #about #about-four {
+        width: 70%;
+        height: 650px;
+        border-bottom: none;
+        padding: 0; }
+        main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li.stanza1 h2 {
+          margin-top: -8px; }
+        main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza1 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza2 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza3 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza4 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza5 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza6 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza7 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza8 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza9 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza10 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza11 p, main[role="main"] #pageWrapper #about #about-four .accordionContainer .accordionOuter .slides li#stanza12 p {
+          padding-top: 0;
+          padding-bottom: 2px; }
 
 /* elements related to m#main*/
 /*these elements have been placed outside of parent element to prevent clipping on left*/

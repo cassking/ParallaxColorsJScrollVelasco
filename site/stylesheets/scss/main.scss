@@ -570,18 +570,22 @@ main[role="main"] {
                 height: 50px;
                 color: $white;
             }
+            /*comment*/
             #about-three {
-                 width: 30%;
+                width: 30%;
                 height: 650px;
                 border-left: 4px solid $black;
+                overflow: hidden;
                 @include translateZfix;
                 p {
+                    margin-left: -35px;
                     font-family: "lustriaregular", serif;
-                    text-shadow: -1px -1px 0px rgba(255,255,255,0.7), 1px 1px 0px rgba(0,0,0,0.8);
+                    text-shadow: -1px -1px 0px rgba(248,208,105,0.3), 1px 1px 0px rgba(0,0,0,0.3);
                     text-align: center;
                     color: #fff;
-                 
+                    font-size: 6.9em;
                     line-height: 0.7em;
+                    letter-spacing: -7px;
                     opacity: 0.4;
                 }
             }
