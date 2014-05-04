@@ -86,6 +86,14 @@
     -o-transform:scale($transform-scale-newsize);
     transform:scale($transform-scale-newsize);
 }
+@mixin transform ($rotate: 90deg, $scale: 1, $skew: 1deg, $translateX: 10px, $translateY: 10px ) {
+  -webkit-transform: rotate($rotate) scale($scale) skew($skew) translateX($translateX) translateY($translateY);
+  -moz-transform: rotate($rotate) scale($scale) skew($skew) translateX($translateX) translateY($translateY);
+  -o-transform: rotate($rotate) scale($scale) skew($skew) translateX($translateX) translateY($translateY);
+  -ms-transform: rotate($rotate) scale($scale) skew($skew) translateX($translateX) translateY($translateY); 
+  transform: rotate($rotate) scale($scale) skew($skew) translateX($translateX) translateY($translateY);
+}
+
 /*this prevents one pixel flashing on affected element by flexslider*/
 
 @mixin translateZfix {
@@ -95,11 +103,13 @@
   -o-transform: translateZ(0);
   transform: translateZ(0);
 }
+
+
+/*---*/
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
     @content;
   }
-
   @-moz-keyframes #{$name} {
     @content;
   }
@@ -114,29 +124,56 @@
   }
 }
 /*animation mixin*/
+
+@include keyframes(moveWord) {
+    0% { opacity: 1; animation-timing-function: ease; height: 0px; }
+    8% { opacity: 0.9; height: 60px; }
+    19% { opacity: 0.5; height: 80px; }
+    25% { opacity: 0.1; height: 100px; }
+    100% { opacity: 0.9; height:0px; }
+}
+@include keyframes(moveWord2) {
+    0% { opacity: 0.7; animation-timing-function: ease; height: 0px; }
+    8% { opacity: 0.6; height: 0px; }
+    19% { opacity: 0.5; height: 100px; }
+    25% { opacity: 0.1; height: 80px; }
+    100% { opacity: 1; height:60px; }
+}
+@include keyframes(moveWord3) {
+    0% { opacity: 1; animation-timing-function: ease; height: 0px; }
+    8% { opacity: 0.1; height: 1000px; }
+    19% { opacity: 0.2; height: 0px; }
+    25% { opacity: 0.1; height: 60px; }
+    100% { opacity: 0.4; height:80px; }
+}
 @include keyframes(opacityfader) {
   0% {
       top: 0;
       left: 10px;
-      color: #926700;
+      color: #ffd630;
    }
 
-   33% {
+   25% {
       top: 10px;
       left: 40px;
       color: #ffd630;
    }
 
-   66% {
+   50% {
       top: 30px;
       left: 0px;
      color: #ffd630;
    }
 
-   100% {
-     top: 10px;
+   75% {
+     top: 40px;
       left: 4px;
       color: #926700;
+   }
+   100% {
+    top: 5px;
+    left: 10px;
+    color: #ffd630;
    }
  }
 

@@ -1,115 +1,471 @@
 /* values can be overwritten when include */
 /*this prevents one pixel flashing on affected element by flexslider*/
+/*---*/
 /*animation mixin*/
 @import url(jquery.jscrollpane.css);
 @import url(flexslider.css);
 @import url(canvas.css);
 @import url("../../fonts/fonts.css");
 @import url("../../fonts/font-awesome.css");
+@-webkit-keyframes moveWord {
+  0% {
+    opacity: 1;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.9;
+    height: 60px; }
+
+  19% {
+    opacity: 0.5;
+    height: 80px; }
+
+  25% {
+    opacity: 0.1;
+    height: 100px; }
+
+  100% {
+    opacity: 0.9;
+    height: 0px; } }
+
+@-moz-keyframes moveWord {
+  0% {
+    opacity: 1;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.9;
+    height: 60px; }
+
+  19% {
+    opacity: 0.5;
+    height: 80px; }
+
+  25% {
+    opacity: 0.1;
+    height: 100px; }
+
+  100% {
+    opacity: 0.9;
+    height: 0px; } }
+
+@-o-keyframes moveWord {
+  0% {
+    opacity: 1;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.9;
+    height: 60px; }
+
+  19% {
+    opacity: 0.5;
+    height: 80px; }
+
+  25% {
+    opacity: 0.1;
+    height: 100px; }
+
+  100% {
+    opacity: 0.9;
+    height: 0px; } }
+
+@-ms-keyframes moveWord {
+  0% {
+    opacity: 1;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.9;
+    height: 60px; }
+
+  19% {
+    opacity: 0.5;
+    height: 80px; }
+
+  25% {
+    opacity: 0.1;
+    height: 100px; }
+
+  100% {
+    opacity: 0.9;
+    height: 0px; } }
+
+@keyframes moveWord {
+  0% {
+    opacity: 1;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.9;
+    height: 60px; }
+
+  19% {
+    opacity: 0.5;
+    height: 80px; }
+
+  25% {
+    opacity: 0.1;
+    height: 100px; }
+
+  100% {
+    opacity: 0.9;
+    height: 0px; } }
+
+@-webkit-keyframes moveWord2 {
+  0% {
+    opacity: 0.7;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.6;
+    height: 0px; }
+
+  19% {
+    opacity: 0.5;
+    height: 100px; }
+
+  25% {
+    opacity: 0.1;
+    height: 80px; }
+
+  100% {
+    opacity: 1;
+    height: 60px; } }
+
+@-moz-keyframes moveWord2 {
+  0% {
+    opacity: 0.7;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.6;
+    height: 0px; }
+
+  19% {
+    opacity: 0.5;
+    height: 100px; }
+
+  25% {
+    opacity: 0.1;
+    height: 80px; }
+
+  100% {
+    opacity: 1;
+    height: 60px; } }
+
+@-o-keyframes moveWord2 {
+  0% {
+    opacity: 0.7;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.6;
+    height: 0px; }
+
+  19% {
+    opacity: 0.5;
+    height: 100px; }
+
+  25% {
+    opacity: 0.1;
+    height: 80px; }
+
+  100% {
+    opacity: 1;
+    height: 60px; } }
+
+@-ms-keyframes moveWord2 {
+  0% {
+    opacity: 0.7;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.6;
+    height: 0px; }
+
+  19% {
+    opacity: 0.5;
+    height: 100px; }
+
+  25% {
+    opacity: 0.1;
+    height: 80px; }
+
+  100% {
+    opacity: 1;
+    height: 60px; } }
+
+@keyframes moveWord2 {
+  0% {
+    opacity: 0.7;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.6;
+    height: 0px; }
+
+  19% {
+    opacity: 0.5;
+    height: 100px; }
+
+  25% {
+    opacity: 0.1;
+    height: 80px; }
+
+  100% {
+    opacity: 1;
+    height: 60px; } }
+
+@-webkit-keyframes moveWord3 {
+  0% {
+    opacity: 1;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.1;
+    height: 1000px; }
+
+  19% {
+    opacity: 0.2;
+    height: 0px; }
+
+  25% {
+    opacity: 0.1;
+    height: 60px; }
+
+  100% {
+    opacity: 0.4;
+    height: 80px; } }
+
+@-moz-keyframes moveWord3 {
+  0% {
+    opacity: 1;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.1;
+    height: 1000px; }
+
+  19% {
+    opacity: 0.2;
+    height: 0px; }
+
+  25% {
+    opacity: 0.1;
+    height: 60px; }
+
+  100% {
+    opacity: 0.4;
+    height: 80px; } }
+
+@-o-keyframes moveWord3 {
+  0% {
+    opacity: 1;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.1;
+    height: 1000px; }
+
+  19% {
+    opacity: 0.2;
+    height: 0px; }
+
+  25% {
+    opacity: 0.1;
+    height: 60px; }
+
+  100% {
+    opacity: 0.4;
+    height: 80px; } }
+
+@-ms-keyframes moveWord3 {
+  0% {
+    opacity: 1;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.1;
+    height: 1000px; }
+
+  19% {
+    opacity: 0.2;
+    height: 0px; }
+
+  25% {
+    opacity: 0.1;
+    height: 60px; }
+
+  100% {
+    opacity: 0.4;
+    height: 80px; } }
+
+@keyframes moveWord3 {
+  0% {
+    opacity: 1;
+    animation-timing-function: ease;
+    height: 0px; }
+
+  8% {
+    opacity: 0.1;
+    height: 1000px; }
+
+  19% {
+    opacity: 0.2;
+    height: 0px; }
+
+  25% {
+    opacity: 0.1;
+    height: 60px; }
+
+  100% {
+    opacity: 0.4;
+    height: 80px; } }
+
 @-webkit-keyframes opacityfader {
   0% {
     top: 0;
     left: 10px;
-    color: #926700; }
+    color: #ffd630; }
 
-  33% {
+  25% {
     top: 10px;
     left: 40px;
     color: #ffd630; }
 
-  66% {
+  50% {
     top: 30px;
     left: 0px;
     color: #ffd630; }
 
-  100% {
-    top: 10px;
+  75% {
+    top: 40px;
     left: 4px;
-    color: #926700; } }
+    color: #926700; }
+
+  100% {
+    top: 5px;
+    left: 10px;
+    color: #ffd630; } }
 
 @-moz-keyframes opacityfader {
   0% {
     top: 0;
     left: 10px;
-    color: #926700; }
+    color: #ffd630; }
 
-  33% {
+  25% {
     top: 10px;
     left: 40px;
     color: #ffd630; }
 
-  66% {
+  50% {
     top: 30px;
     left: 0px;
     color: #ffd630; }
 
-  100% {
-    top: 10px;
+  75% {
+    top: 40px;
     left: 4px;
-    color: #926700; } }
+    color: #926700; }
+
+  100% {
+    top: 5px;
+    left: 10px;
+    color: #ffd630; } }
 
 @-o-keyframes opacityfader {
   0% {
     top: 0;
     left: 10px;
-    color: #926700; }
+    color: #ffd630; }
 
-  33% {
+  25% {
     top: 10px;
     left: 40px;
     color: #ffd630; }
 
-  66% {
+  50% {
     top: 30px;
     left: 0px;
     color: #ffd630; }
 
-  100% {
-    top: 10px;
+  75% {
+    top: 40px;
     left: 4px;
-    color: #926700; } }
+    color: #926700; }
+
+  100% {
+    top: 5px;
+    left: 10px;
+    color: #ffd630; } }
 
 @-ms-keyframes opacityfader {
   0% {
     top: 0;
     left: 10px;
-    color: #926700; }
+    color: #ffd630; }
 
-  33% {
+  25% {
     top: 10px;
     left: 40px;
     color: #ffd630; }
 
-  66% {
+  50% {
     top: 30px;
     left: 0px;
     color: #ffd630; }
 
-  100% {
-    top: 10px;
+  75% {
+    top: 40px;
     left: 4px;
-    color: #926700; } }
+    color: #926700; }
+
+  100% {
+    top: 5px;
+    left: 10px;
+    color: #ffd630; } }
 
 @keyframes opacityfader {
   0% {
     top: 0;
     left: 10px;
-    color: #926700; }
+    color: #ffd630; }
 
-  33% {
+  25% {
     top: 10px;
     left: 40px;
     color: #ffd630; }
 
-  66% {
+  50% {
     top: 30px;
     left: 0px;
     color: #ffd630; }
 
-  100% {
-    top: 10px;
+  75% {
+    top: 40px;
     left: 4px;
-    color: #926700; } }
+    color: #926700; }
+
+  100% {
+    top: 5px;
+    left: 10px;
+    color: #ffd630; } }
 
 /*columns mixins*/
 /*legal values are 1, all*/
@@ -371,7 +727,7 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
       .accordionContainer .accordionOuter .slides li {
         position: relative;
         display: block;
-        height: 1%;
+        height: 47px;
         padding-top: 7px;
         background: #80b7e8;
         border-top: 4px solid black;
@@ -388,7 +744,8 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
           top: 10px;
           left: 5%;
           font-family: FontAwesome;
-          font-size: 0.4em; }
+          font-size: 0.4em;
+          opacity: 0.2; }
         .accordionContainer .accordionOuter .slides li:last-child {
           border-bottom: 4px solid black; }
         .accordionContainer .accordionOuter .slides li:first-of-type {
@@ -405,6 +762,12 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
           -ms-transition: all 1.6s linear 0ms;
           -o-transition: all 1.6s linear 0ms;
           transition: all 1.6s linear 0ms; }
+        .accordionContainer .accordionOuter .slides li h2 {
+          margin-left: 45px; }
+        .accordionContainer .accordionOuter .slides li h2.title:after {
+          font-size: 2.4em;
+          margin-top: -30px;
+          margin-right: 14px; }
         .accordionContainer .accordionOuter .slides li:hover {
           position: relative;
           height: auto;
@@ -627,6 +990,9 @@ main[role="main"] {
           text-align: center;
           opacity: 0.4; }
         main[role="main"] #pageWrapper #english #poem-two p.animate {
+          position: absolute;
+          top: 0;
+          left: 0;
           padding: 0;
           font-size: 4.1em;
           line-height: 0.9;
@@ -717,6 +1083,19 @@ main[role="main"] {
           -ms-transform: rotate(-45deg);
           -o-transform: rotate(-45deg);
           transform: rotate(-45deg); }
+          main[role="main"] #pageWrapper #english #poem-four .diagonal.diagonal-alt {
+            top: -70px;
+            left: 30px;
+            color: #80b7e8;
+            width: 500px;
+            height: 300px;
+            text-align: right;
+            font-size: 0.9em;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg); }
     main[role="main"] #pageWrapper #about {
       /*comment*/ }
       main[role="main"] #pageWrapper #about #about-one {
@@ -728,26 +1107,7 @@ main[role="main"] {
           opacity: 0.7;
           text-align: right;
           font-family: "Lato-Blackitalic", sans-serif;
-          font-size: 1.3em;
-          -webkit-column-count: 6;
-          /* Chrome, Safari, Opera */
-          -moz-column-count: 6;
-          /* Firefox */
-          -o-column-count: 6;
-          -ms-column-count: 6;
-          column-count: 6;
-          -webkit-column-gap: 0;
-          /* Chrome, Safari, Opera */
-          -moz-column-gap: 0;
-          /* Firefox */
-          -o-column-gap: 0;
-          -ms-column-gap: 0;
-          column-gap: 0;
-          -webkit-transform: rotate(-10deg);
-          -moz-transform: rotate(-10deg);
-          -ms-transform: rotate(-10deg);
-          -o-transform: rotate(-10deg);
-          transform: rotate(-10deg); }
+          font-size: 1.3em; }
       main[role="main"] #pageWrapper #about #about-two {
         width: 20%;
         height: 50px;
@@ -758,6 +1118,7 @@ main[role="main"] {
           font-family: "Lato-Blackitalic", sans-serif;
           text-align: right; }
       main[role="main"] #pageWrapper #about #about-three {
+        position: relative;
         width: 30%;
         height: 650px;
         border-left: 4px solid black;
@@ -768,15 +1129,124 @@ main[role="main"] {
         -o-transform: translateZ(0);
         transform: translateZ(0); }
         main[role="main"] #pageWrapper #about #about-three p {
-          margin-left: -35px;
+          position: relative;
+          padding: 0;
           font-family: "lustriaregular", serif;
           text-shadow: -1px -1px 0px rgba(248, 208, 105, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.3);
           text-align: center;
           color: #fff;
-          font-size: 6.9em;
-          line-height: 0.7em;
-          letter-spacing: -7px;
-          opacity: 0.4; }
+          font-size: 2.3em;
+          line-height: .9em;
+          letter-spacing: -1px;
+          opacity: 1; }
+          main[role="main"] #pageWrapper #about #about-three p b {
+            font-style: normal;
+            font-weight: normal;
+            opacity: 0.2; }
+            main[role="main"] #pageWrapper #about #about-three p b span {
+              opacity: 1;
+              display: inline-block;
+              font-size: 110%;
+              text-shadow: -1px -1px 0px rgba(248, 208, 105, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.3); }
+              main[role="main"] #pageWrapper #about #about-three p b span:nth-child(1) {
+                -o-animation: moveWord;
+                -moz-animation: moveWord;
+                -webkit-animation: moveWord;
+                animation: moveWord;
+                -o-animation-duration: 18s;
+                -moz-animation-duration: 18s;
+                -webkit-animation-duration: 18s;
+                animation-duration: 18s;
+                -o-animation-timing-function: ease;
+                -moz-animation-timing-function: ease;
+                -webkit-animation-timing-function: ease;
+                animation-timing-function: ease;
+                -o-animation-iteration-count: infinite;
+                -moz-animation-iteration-count: infinite;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                -o-animation-direction: alternate;
+                -moz-animation-direction: alternate;
+                -webkit-animation-direction: alternate;
+                animation-direction: alternate;
+                -o-animation-delay: 0;
+                -moz-animation-delay: 0;
+                -webkit-animation-delay: 0;
+                animation-delay: 0;
+                -o-animation-play-state: running;
+                -moz-animation-play-state: running;
+                -webkit-animation-play-state: running;
+                animation-play-state: running;
+                -o-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards; }
+              main[role="main"] #pageWrapper #about #about-three p b span:nth-child(2n+2) {
+                -o-animation: moveWord;
+                -moz-animation: moveWord;
+                -webkit-animation: moveWord;
+                animation: moveWord;
+                -o-animation-duration: 10s;
+                -moz-animation-duration: 10s;
+                -webkit-animation-duration: 10s;
+                animation-duration: 10s;
+                -o-animation-timing-function: ease;
+                -moz-animation-timing-function: ease;
+                -webkit-animation-timing-function: ease;
+                animation-timing-function: ease;
+                -o-animation-iteration-count: infinite;
+                -moz-animation-iteration-count: infinite;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                -o-animation-direction: normal;
+                -moz-animation-direction: normal;
+                -webkit-animation-direction: normal;
+                animation-direction: normal;
+                -o-animation-delay: 2s;
+                -moz-animation-delay: 2s;
+                -webkit-animation-delay: 2s;
+                animation-delay: 2s;
+                -o-animation-play-state: running;
+                -moz-animation-play-state: running;
+                -webkit-animation-play-state: running;
+                animation-play-state: running;
+                -o-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards; }
+              main[role="main"] #pageWrapper #about #about-three p b span:nth-child(3n) {
+                -o-animation: moveWord;
+                -moz-animation: moveWord;
+                -webkit-animation: moveWord;
+                animation: moveWord;
+                -o-animation-duration: 20s;
+                -moz-animation-duration: 20s;
+                -webkit-animation-duration: 20s;
+                animation-duration: 20s;
+                -o-animation-timing-function: ease;
+                -moz-animation-timing-function: ease;
+                -webkit-animation-timing-function: ease;
+                animation-timing-function: ease;
+                -o-animation-iteration-count: infinite;
+                -moz-animation-iteration-count: infinite;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                -o-animation-direction: alternate;
+                -moz-animation-direction: alternate;
+                -webkit-animation-direction: alternate;
+                animation-direction: alternate;
+                -o-animation-delay: 4s;
+                -moz-animation-delay: 4s;
+                -webkit-animation-delay: 4s;
+                animation-delay: 4s;
+                -o-animation-play-state: running;
+                -moz-animation-play-state: running;
+                -webkit-animation-play-state: running;
+                animation-play-state: running;
+                -o-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards; }
       main[role="main"] #pageWrapper #about #about-four {
         width: 70%;
         height: 650px;
