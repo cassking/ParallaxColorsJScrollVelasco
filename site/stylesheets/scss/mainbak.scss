@@ -571,8 +571,6 @@ main[role="main"] {
                 color: $white;
             }
             #about-three {
-                 width: 30%;
-                height: 650px;
                 border-left: 4px solid $black;
                 @include translateZfix;
                 p {
@@ -580,7 +578,7 @@ main[role="main"] {
                     text-shadow: -1px -1px 0px rgba(255,255,255,0.7), 1px 1px 0px rgba(0,0,0,0.8);
                     text-align: center;
                     color: #fff;
-                 
+                   /* font-size: 2em;*/
                     line-height: 0.7em;
                     opacity: 0.4;
                 }

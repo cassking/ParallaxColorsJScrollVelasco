@@ -86,10 +86,36 @@
     -o-transform:scale($transform-scale-newsize);
     transform:scale($transform-scale-newsize);
 }
+/*this prevents one pixel flashing on affected element by flexslider*/
 
-@-webkit-keyframes opacityfader
-  {
-   0% {
+@mixin translateZfix {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+   @content;
+  }
+  @-ms-keyframes #{$name} {
+     @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+/*animation mixin*/
+@include keyframes(opacityfader) {
+  0% {
       top: 0;
       left: 10px;
       color: #926700;
@@ -112,121 +138,64 @@
       left: 4px;
       color: #926700;
    }
+ }
+
+@mixin animation-name($name...) {
+  -o-animation-name: $name;
+  -moz-animation-name: $name;
+  -webkit-animation-name: $name;
+  animation-name: $name;
+}
+@mixin animation-duration($duration...) {
+  -o-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
 }
 
-@-moz-keyframes vertscroller
-  {
-   0% {
-      top: 0;
-      left: 10px;
-      color: #926700;
-   }
-
-   33% {
-      top: 10px;
-      left: 40px;
-      color: #ffd630;
-   }
-
-   66% {
-      top: 30px;
-      left: 0px;
-     color: #ffd630;
-   }
-
-   100% {
-     top: 10px;
-      left: 4px;
-      color: #926700;
-   }
+@mixin animation-timing-function($timing...) {
+  -o-animation-timing-function: $timing;
+  -moz-animation-timing-function: $timing;
+  -webkit-animation-timing-function: $timing;
+  animation-timing-function: $timing;
 }
-
-
-@-o-keyframes vertscroller
- {
-   0% {
-      top: 0;
-      left: 10px;
-      color: #926700;
-   }
-
-   33% {
-      top: 10px;
-      left: 40px;
-      color: #ffd630;
-   }
-
-   66% {
-      top: 30px;
-      left: 0px;
-     color: #ffd630;
-   }
-
-   100% {
-     top: 10px;
-      left: 4px;
-      color: #926700;
-   }
+@mixin animation-iteration-count($count...) {
+  -o-animation-iteration-count: $count;
+  -moz-animation-iteration-count: $count;
+  -webkit-animation-iteration-count: $count;
+  animation-iteration-count: $count;
 }
-
-
-@-ms-keyframes vertscroller
-  {
-   0% {
-      top: 0;
-      left: 10px;
-      color: #926700;
-   }
-
-   33% {
-      top: 10px;
-      left: 40px;
-      color: #ffd630;
-   }
-
-   66% {
-      top: 30px;
-      left: 0px;
-     color: #ffd630;
-   }
-
-   100% {
-     top: 10px;
-      left: 4px;
-      color: #926700;
-   }
+@mixin animation-direction($direction...) {
+  -o-animation-direction: $direction;
+  -moz-animation-direction: $direction;
+  -webkit-animation-direction: $direction;
+  animation-direction: $direction;
 }
-
-
-@keyframes vertscroller
-  {
-   0% {
-      top: 0;
-      left: 10px;
-      color: #926700;
-   }
-
-   33% {
-      top: 10px;
-      left: 40px;
-      color: #ffd630;
-   }
-
-   66% {
-      top: 30px;
-      left: 0px;
-     color: #ffd630;
-   }
-
-   100% {
-     top: 10px;
-      left: 4px;
-      color: #926700;
-   }
+@mixin animation-delay($delay...) {
+  -o-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -webkit-animation-delay: $delay;
+  animation-delay: $delay;
 }
-
+@mixin animation-fill-mode($fill...) {
+  -o-animation-fill-mode: $fill;
+  -moz-animation-fill-mode: $fill;
+  -webkit-animation-fill-mode: $fill;
+  animation-fill-mode: $fill;
+}
+@mixin animation-play-state($state...) {
+  -o-animation-play-state: $state;
+  -moz-animation-play-state: $state;
+  -webkit-animation-play-state: $state;
+  animation-play-state: $state;
+}
+@mixin animation($animation...) {
+  -o-animation: $animation;
+  -moz-animation: $animation;
+  -webkit-animation: $animation;
+  animation: $animation;
+}
 /*columns mixins*/
-
 @mixin columns($count) {
     -webkit-column-count:$count; /* Chrome, Safari, Opera */
     -moz-column-count:$count; /* Firefox */
