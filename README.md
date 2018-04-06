@@ -4,6 +4,7 @@ April 2014.
 
 Parallax JScroll template. Feel free to fork it and customize it as you wish.
 This is purely experimental, needs a few fixes and updates as of April 27, 2014
+
 DEMO
 -----------
 https://rawgit.com/cassking/ParallaxColorsJScrollVelasco/master/site/index.html
